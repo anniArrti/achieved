@@ -154,12 +154,13 @@ server.listen(port, () => console.log('Running'));
 var Schema = mongoose.Schema;
 
 var usersLogin = new Schema({   
- firstname : { type: String},
- lastname : { type: String},
- email :{ type: String, required: true },
- password : { type: String}, 
- mobileNumber : { type: String}
+  firstname : { type: String},
+  lastname : { type: String},
+  email :{ type: String, required: true },
+  password : { type: String}, 
+  mobileNumber : { type: String}
 });
+
 var user = mongoose.model('user', usersLogin);
 
 app.post("/api/register",function(req,res){
